@@ -1,2 +1,49 @@
 Names: David Maydew & Jeremy Schreck
 NetID: dmm68 & jes85
+
+Readability
+
+-What pieces of code help versus obscure your understanding of the algorithm?
+    In the Disk file, the comments above the methods help make it clear what each method 
+    does and what the parameters and return values represent. In the Bins file, the lack 
+    of comments hinders the readability of the algorithm. In addition, poor variable naming
+    and lack of methods obscures the purpose of the code. 
+-What comments might be helpful within the code?
+    Some comments that might be helpful are descriptions of if-conditions in english and 
+    how those relate the the problem. For example, noting that the worst-fit algorithm adds
+    the next file to the bin with the greatest amount of remaining space. 
+-Are there places where the code could be more concise and also more clear?
+    One instance would be in the blocks of println statements, which could be converted into
+    one concise print with a formatted string. 
+
+Testability
+
+-How would you test this code for bugs?
+    I would write unit tests that would verify that this code solves the requirements of 
+    the problem -- paying specific attention to edge cases. There should be a test for every
+    possible case.
+-Give a specific example of a "test case" as the code is currently written.
+    Some example cases would be the examples given in the hand-out, as well as a case with
+    an empty list of files as input. 
+-What additional functions may be helpful?
+    A function to print the specific output data we want, and a function to add files to bins
+    based on the worst-fit algorithm. This makes it so both algorithms could call the same
+    method, the only difference being that the input is in-order or sorted. 
+-Give a specific example of a "test case" for your new function.
+    One example of a test case would be verifying that our specific worst-fit algorithm
+    returns the desired priority queue as output. 
+
+Extensibility
+
+-What Code Smells can you find?
+    One example of a Code Smell is the repeated System.out.println() statement. Another 
+    example is the duplicated worst-fit algorithm code. 
+ -What suggestions does this code make about how someone would extend it in the future to compare the performance of a wider variety of fitting algorithms?
+    As written, this code makes it very difficult to add any other algorithms because the
+    code is not concise or grouped in a logical manner. 
+-What dependencies are there between different parts of the code?
+    One dependency is that in the Bins code, you create a Disk object written in a different
+    file. Therefore, the correctness of the Bins code is dependent on the Disk code. 
+-How easy to find are those dependencies?
+	
+    -Can you clarify or remove those dependencies?
