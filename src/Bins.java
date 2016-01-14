@@ -28,6 +28,7 @@ public class Bins {
 
     /**
      * The main program.
+     * Needs to be re-factored.
      */
     public static void main (String args[]) {
         Bins b = new Bins();
